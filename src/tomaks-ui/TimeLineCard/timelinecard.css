@@ -1,0 +1,7 @@
+.cui-timeline__card {
+  width: 345px;
+  background: #333c42;
+
+  /* to remove */
+  height: 500px;
+}

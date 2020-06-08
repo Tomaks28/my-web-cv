@@ -1,0 +1,46 @@
+.cui-button {
+  border: none; /*Enlève les styles du navigateur*/
+  outline: none; /*Enlève les styles du navigateur*/
+
+  cursor: pointer; /*Curseur lors du hover*/
+
+  /* Stylisation du container du bouton dynamiquement */
+  font-size: 1rem; /*Besoin de définir inheritance du parent (font-size) sinon navigateur par défaut*/
+  padding: 0.3em 0.5em;
+  border-radius: 0.3em;
+
+  /* Animation du bouton */
+  position: relative; /*Utiliser pour le ripple (position absolute du before)*/
+  overflow: hidden; /*Pour éviter les débordement du ripple*/
+  /* transition: transform ease-in-out 0.3s; */
+
+  /* Propriétés customizables */
+  background-color: #119fe5;
+  color: white;
+}
+
+/* Utiliser pour l'effet ripple */
+.cui-button::before {
+  content: "";
+  position: absolute;
+  background-color: #eee;
+  /* on trace le cercle du ripple */
+  padding: 50%;
+  border-radius: 50%;
+  /* on positionne le cercle au milieu au click de l'utilisateur*/
+  /* left: 50%; */
+  /* top: 50%; */
+  left: calc(100% * var(--ripple-x));
+  top: calc(100% * var(--ripple-y));
+  transform: translate(-50%, -50%) scale(1);
+  /* animation */
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Lors du click par l'utilisateur dans le bouton */
+.cui-button:active::before {
+  opacity: 1;
+  transition: 0s;
+  transform: translate(-50%, -50%) scale(0);
+}

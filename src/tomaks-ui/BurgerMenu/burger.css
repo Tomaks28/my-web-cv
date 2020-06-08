@@ -1,0 +1,30 @@
+.cui-burger {
+  /* on place les trois barres vers le bas */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* on donne une dimension à l'ensemble */
+  height: 24px;
+  width: 30px;
+
+  cursor: pointer;
+  outline: none;
+
+  border: none;
+  background: transparent;
+
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cui-burger:hover {
+  outline: none;
+}
+
+.cui-burger__line {
+  /* couleur d'une barre */
+  background: white;
+  /* dimension */
+  width: 30px;
+  height: 2px;
+}

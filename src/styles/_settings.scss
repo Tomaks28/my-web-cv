@@ -1,0 +1,71 @@
+// Importation de la font principale Montserra 100, 400, 700
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap");
+
+// Déclaration variable de font
+$font: "Montserra", sans-serif;
+
+// Déclaration des couleurs
+$dark-1: #1e1f27;
+$dark-2: #222c33;
+$dark-3: #2b343a;
+$grey-1: #c0c3c5;
+$orange: orange;
+$white: #ebecec;
+$black: #333;
+
+// value         |0px     600px    960px    1280px   1920px
+// key           |xs      sm       md       lg       xl
+// screen width  |--------|--------|--------|--------|-------->
+// range         |   xs   |   sm   |   md   |   lg   |   xl
+$xs: 600px;
+$sm: 960px;
+$md: 1280px;
+$lg: 1920px;
+
+$headerHeight: 56px;
+
+.wrapper {
+  padding-top: $headerHeight;
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: $dark-2;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Pour tous les éléments de base
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // font de base pour tous les éléments
+  font-family: $font;
+  //   couleur du texte de base est blanc
+  font-size: 16px;
+}
+
+// pointer sur tous les boutons
+button {
+  cursor: pointer;
+}
+
+// suppression des punaises sur les listes
+li {
+  list-style-type: none;
+}
+
+// tous les liens n'ont pas de couleur, de decoration et pointeur
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+a:visited {
+  color: $black;
+}

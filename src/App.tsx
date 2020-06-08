@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { NavBar, Wrapper } from "./tomaks-ui";
+import { Home, CV, Projects, Drawer } from "./containers";
+import { screens } from "./constants";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar sideDrawerContent={Drawer} />
+      <Switch>
+        <Wrapper>
+          <Route path={screens.HOME} exact component={Home} />
+          <Route path={screens.CV} exact component={CV} />
+          <Route path={screens.PROJECTS} exact component={Projects} />
+        </Wrapper>
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;

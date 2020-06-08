@@ -1,0 +1,26 @@
+.cui-side-drawer {
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0 7px rgba(0, 0, 0, 0.5);
+  /* le drawer doit etre fixed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* ouverture maximale du drawer et taille max */
+  width: 70%;
+  max-width: 300px;
+  /* positionnement de la barre au dessus de tout */
+  z-index: 200;
+  /* on cache le drawer */
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+  /* transition: transform 0.3s cubic-bezier(0.7, -0.4, 0.3, 1.4); */
+
+  /*  */
+  overflow: hidden;
+}
+
+.cui-side-drawer.open {
+  /* on ouvre le drawer */
+  transform: translateX(0);
+}

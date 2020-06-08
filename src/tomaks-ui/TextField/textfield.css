@@ -1,0 +1,44 @@
+.cui-inputBox {
+  position: relative;
+
+  /* Stylisation du container du bouton dynamiquement */
+  font-size: 1rem; /*Besoin de définir inheritance du parent (font-size) sinon navigateur par défaut*/
+  padding: 0.3em 0.5em;
+  color: white;
+}
+
+.cui-inputBox input {
+  border: none; /*Enlève les styles du navigateur*/
+  outline: none; /*Enlève les styles du navigateur*/
+
+  /* Propriétés customizables */
+  font-size: inherit;
+  padding: inherit;
+  color: inherit;
+  width: 100%;
+  background: transparent;
+  border-bottom: 1px solid white;
+}
+
+.cui-inputBox label {
+  /* positionnement du label */
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  /* Effet de transition du label vers le haut */
+  transition: 0.5s;
+
+  /* Propriétés customizables */
+  color: inherit;
+  font-size: inherit;
+  padding: inherit;
+}
+
+.cui-inputBox input:valid ~ label,
+.cui-inputBox input:focus ~ label {
+  top: -0.8em;
+  left: 0;
+  font-size: 0.8rem;
+  color: lightgrey;
+}

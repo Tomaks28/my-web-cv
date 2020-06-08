@@ -1,0 +1,33 @@
+html,
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  /* supprimer l'effet d'entourage bleu autour des inputs, button etc... */
+  outline: none;
+  text-decoration: none;
+}
+
+.center-element {
+  display: flex;
+  justify-content: center; /*Aligne horizontalement*/
+  align-items: center; /*Aligne verticalement (note: il est important de préciser la hauteur height)*/
+}
+
+.full-view {
+  height: 100vh;
+}
+
+.in-column {
+  flex-direction: column;
+}
+
+button {
+  text-decoration: none;
+  background: none;
+  outline: none;
+  border: none;
+  /* la taille vient du parent */
+  font-size: inherit;
+}
