@@ -1,20 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavBar, Wrapper } from "./tomaks-ui";
-import { Home, CV, Projects, Drawer } from "./containers";
+import { Drawer, Home, CV, Projects, NotFound } from "./containers";
 import { screens } from "./constants";
 
 const App = () => {
   return (
     <Router>
       <NavBar sideDrawerContent={Drawer} />
-      <Switch>
-        <Wrapper>
+      <Wrapper>
+        <Switch>
           <Route path={screens.HOME} exact component={Home} />
-          <Route path={screens.CV} exact component={CV} />
-          <Route path={screens.PROJECTS} exact component={Projects} />
-        </Wrapper>
-      </Switch>
+          <Route path={screens.CV} component={CV} />
+          <Route path={screens.PROJECTS} component={Projects} />
+          <Route component={NotFound} />
+        </Switch>
+      </Wrapper>
     </Router>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { screens, images } from "../../constants";
-import { ListItem, Avatar } from "../../tomaks-ui";
+import { ListItem } from "../../tomaks-ui";
 import { Widgets, Work } from "@material-ui/icons";
 
 interface Props {
@@ -29,17 +29,17 @@ const Drawer = ({ handleBackdropClose }: Props) => {
       />
       <div className="divider" />
       <ListItem
-        icon={<Avatar src={images.NODE} alt="nodeJS" />}
+        icon={<img src={images.NODE} alt="nodeJS" />}
         text="NodeJS"
         onClick={() => handleClick(screens.NODE)}
       />
       <ListItem
-        icon={<Avatar src={images.REACT} alt="reactJS" />}
+        icon={<img src={images.REACT} alt="reactJS" />}
         text="ReactJS"
         onClick={() => handleClick(screens.REACT)}
       />
       <ListItem
-        icon={<Avatar src={images.REACT_NATIVE} alt="React-Native" />}
+        icon={<img src={images.REACT_NATIVE} alt="React-Native" />}
         text="React-Native"
         onClick={() => handleClick(screens.REACT_NATIVE)}
       />
